@@ -4,7 +4,14 @@ Code for handling sequences
 
 ## Seqkit 
 ### Reverse Complement
-seqkit seq CN3704.fasta -r -t DNA > CN3704_UKHSA_gidA.fasta
+seqkit seq CN3704.fasta -r -p -t DNA > CN3704_UKHSA_rev.fasta
+
+### Remove Gaps
+seqkit seq -g NAME.fasta > NEW_NAME.fasta 
+
+## Prokka 
+
+
 
 ## BLAST 
 
