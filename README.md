@@ -34,3 +34,22 @@ fastp -i Sp_clone_S2_S73_R1_001.fastq -I Sp_clone_S2_S73_R2_001.fastq -g -f 20 -
 
 ### Make BLAST database
 makeblastdb -in $file -parse_seqids -dbtype nucl
+
+### BLAST Loop
+#!/bin/bash
+#Loop for making each genome into a database
+files=./Raw_Reads/SRR12168673.fasta
+for file in $files
+do
+makeblastdb -in $file -parse_seqids -dbtype nucl;
+done
+
+#Loop for conducting BLAST search in each database
+for database in ./Raw_Reads/SRR12168673.fasta; do
+blastn \
+-query First_40_IS481.txt \
+-db $database \
+-max_target_seqs 50000 \
+-outfmt "6 std sstrand" \
+-out $database.BLAST.Result.First.txt;
+done
