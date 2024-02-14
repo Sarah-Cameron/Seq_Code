@@ -3,6 +3,7 @@ Code for handling sequences
 
 
 ## Seqkit 
+seqkit stats -a reads.fasta 
 
 ### Fastq to Fasta 
 eqkit fq2fa L6_Illumina_Trimmed.fastq -o L6_Illumina_Trimmed.fasta
@@ -27,6 +28,8 @@ medaka tools annotate --dpsp ./medaka/medaka.sorted.vcf L10_Stock_Assembly.fasta
 ## FastP
 fastp -i Sp_clone_S2_S73_R1_001.fastq -I Sp_clone_S2_S73_R2_001.fastq -g -f 20 -F 20 -t 5 -T 5 -o S2_R1.fastq -O S2_R2.fastq
 
+## SAMTOOLS
+samtools coverage NAME.bam
 
 ## Prokka 
 
