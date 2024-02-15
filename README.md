@@ -32,6 +32,7 @@ fastp -i Sp_clone_S2_S73_R1_001.fastq -I Sp_clone_S2_S73_R2_001.fastq -g -f 20 -
 samtools coverage NAME.bam
 
 ## Prokka 
+prokka --outdir L5_Stock --genus Bordetella --species pertussis --strain L5_Stock --centre XXX L5_Stock_final.fasta
 
 ## BLAST 
 
