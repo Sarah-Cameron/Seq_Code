@@ -1,6 +1,8 @@
 # Seq_Code
 Code for handling sequences
 
+### Rename fasta header by filename 
+awk '/^>/{print ">" substr(FILENAME,1,length(FILENAME)-6); next} 1' *.fasta
 
 ## Seqkit 
 seqkit stats -a reads.fasta 
