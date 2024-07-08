@@ -1,5 +1,12 @@
 # Seq_Code
-Code for handling sequences
+Code for handling sequences 
+
+
+### Using x86_64 conda on arm64 M2 Chip 
+CONDA_SUBDIR=osx-64 conda create -n rosetta python   # create a new environment called rosetta with intel packages.
+conda activate rosetta
+python -c "import platform;print(platform.machine())"
+conda config --env --set subdir osx-64  # make sure that conda commands in this environment use intel packages
 
 ### Rename fasta header by filename 
 awk '/^>/{print ">" substr(FILENAME,1,length(FILENAME)-6); next} 1' *.fasta
