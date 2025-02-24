@@ -29,6 +29,20 @@ seqkit seq -g NAME.fasta > NEW_NAME.fasta
 ### Extract a only fasta files from given list: 
 seqkit grep -f yagA.txt pangenome_reference.fa -o yagA_Reads.fasta
 
+### Extract contig lengths 
+seqkit fx2tab -n -l *.fasta > contig_lengths.tsv
+
+## Linux Files 
+
+### Remove double quotes from file 
+tr -d '"' <infile
+
+### Extract all file types to a separate directory 
+find . -name \*.xls -exec cp {} newDir \;
+
+### Compress directory with tar 
+tar czf name_of_archive_file.tar.gz name_of_directory_to_tar
+
 ## Medaka 
 
 ### Annotate a vcf file with depth of reference and alternative reads for each SNP (fwd and rev for each):
