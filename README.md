@@ -34,6 +34,9 @@ seqkit fx2tab -n -l *.fasta > contig_lengths.tsv
 
 ## Linux Files 
 
+### Extract 2nd column from .txt file
+awk '{print $2}' file1 > file2
+
 ### Remove double quotes from file 
 tr -d '"' <infile
 
