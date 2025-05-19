@@ -14,6 +14,9 @@ awk '/^>/{print ">" substr(FILENAME,1,length(FILENAME)-6); next} 1' *.fasta
 ## Seqkit 
 seqkit stats -a reads.fasta 
 
+### Get Contig Lengths
+seqkit fx2tab --length --name --header-line  foo.fasta
+
 ### Fastq to Fasta 
 eqkit fq2fa L6_Illumina_Trimmed.fastq -o L6_Illumina_Trimmed.fasta
 
