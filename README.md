@@ -1,6 +1,8 @@
 # Seq_Code
 Code for handling sequences 
 
+### Move files with same extension from subdirectories:
+find . -name \*.xls -exec cp {} newDir \;
 
 ### Using x86_64 conda on arm64 M2 Chip 
 CONDA_SUBDIR=osx-64 conda create -n rosetta python   # create a new environment called rosetta with intel packages.
