@@ -91,3 +91,6 @@ blastn \
 -outfmt "6 std sstrand" \
 -out $database.BLAST.Result.First.txt;
 done
+
+## Making Fake Illumina Reads - art_modern
+opt/build_release/art_modern --mode wgs --lc pe --i-file SPARK_1074_C1_Dup_5.fasta --o-fastq opt/build_release/SPARK_1074_50x_DUP_5.fastq --qual_file_1 data/Illumina_profiles/HiSeqXtruSeqL150R1.txt --qual_file_2 data/Illumina_profiles/HiSeqXtruSeqL150R2.txt --read_len 150 --parallel 4 --i-fcov 50 --pe_frag_dist_mean 300 --pe_frag_dist_std_dev 50
