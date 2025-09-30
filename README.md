@@ -54,6 +54,9 @@ find . -name \*.xls -exec cp {} newDir \;
 ### Compress directory with tar 
 tar czf name_of_archive_file.tar.gz name_of_directory_to_tar
 
+### Split multi fasta into chunks
+awk 'BEGIN {n=0;} /^>/ {if(n%500==0){file=sprintf("chunk%d.fa",n);} print >> file; n++; next;} { print >> file; }' < multi.fa
+
 ## Medaka 
 
 ### Annotate a vcf file with depth of reference and alternative reads for each SNP (fwd and rev for each):
